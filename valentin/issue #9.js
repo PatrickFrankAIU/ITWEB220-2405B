@@ -1,28 +1,22 @@
-let dayOfWeek = +prompt('Enter a number 1-7');
+let trafficLight = prompt('color');
+let timeOfDay = prompt('time of day');
 
-switch(dayOfWeek){
-    case 1:
-        console.log('Sunday');
-        break;
-    case 2:
-        console.log('Monday');
-        break;
-    case 3:
-        console.log('Tuesday');
-        break;
-    case 4:
-        console.log('Wednesday');
-        break;
-    case 5:
-        console.log('Thursday');
-        break;
-    case 6:
-        console.log('Friday');
-        break;
-    case 7:
-        console.log('Saturday');
-        break;
-    default:
-        console.log( "invalid day");
-        
+if (trafficLight == 'green'){
+    console.log('Go');
+} else if(trafficLight == 'Yellow'){
+    console.log("slow down");
+} else if (trafficLight == 'red'){
+    console.log('Stop');
+} else if(trafficLight == 'blinking'){
+    if(timeOfDay == 'day'){
+        console.log("Proceed with caution");
+    } else if(timeOfDay == 'night'){
+        console.log("Stop, then proceed with caution");
+    }
+} else if (trafficLight == 'none'){
+    if(timeOfDay == 'day'){
+        console.log('Stop, then proceed when safe');
+    } else if( timeOfDay == 'night'){
+        console.log('Use the light as a stop sign');
+    }
 }
